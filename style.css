@@ -1,41 +1,89 @@
-body {
-    font-family: Arial, sans-serif;
+/* Configurações Globais */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f4;
+    color: #333;
     line-height: 1.6;
 }
 
+/* Cabeçalho e Menu */
 header {
-    background-color: #2E7D32;
+    background-color: #2e6f40; /* Verde Agrinho */
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-header nav a {
+nav a {
     color: white;
-    margin: 0 10px;
     text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
+nav a:hover {
+    color: #a2e8b7;
+}
+
+/* Seção Hero */
 #hero {
+    position: relative;
     text-align: center;
-    margin: 20px;
+    color: white;
 }
 
 #hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(60%); /* Escurece a imagem para destacar o texto */
+}
+
+#hero h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
     width: 80%;
-    max-width: 800px;
-    height: auto;
 }
 
+/* Seções de Conteúdo */
 section {
-    padding: 20px;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-footer {
-    background-color: #1B5E20;
-    color: white;
-    text-align: center;
-    padding: 10px;
+h2 {
+    color: #2e6f40;
+    margin-bottom: 15px;
 }
+
+#tecnologias ul {
+    list-style-type: none;
+}
+
+#tecnologias li {
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 5px solid #2e6f40;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Rodapé */
+footer {
+    background-color: #1e3d25;
+    color:
