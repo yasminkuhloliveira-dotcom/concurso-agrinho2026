@@ -3,27 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte - Futuro Sustentável</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Agrinho 2026 - Sustentabilidade no Campo e na Escola</title>
+    <style>
+        /* --- ESTILIZAÇÃO GERAL --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f9f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2e7d32;
+            border-bottom: 2px solid #a5d6a7;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* --- GRID DE SOLUÇÕES --- */
+        .grid-solucoes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2e7d32;
+        }
+
+        /* --- MÍDIA (VÍDEOS E IMAGENS) --- */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            margin-bottom: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        /* --- QUIZ INTERATIVO --- */
+        .quiz-container {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .btn-quiz {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn-quiz:hover {
+            background-color: #1b5e20;
+        }
+
+        #resultado-quiz {
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <h1>Agro Forte, Futuro Sustentável</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="artigos.html">Artigos</a>
-            <a href="dados.html">Dados</a>
-            <a href="contato.html">Contato</a>
+        <h1>Agrinho 2026: Inovação e Sustentabilidade</h1>
+        <p>Pequenas ações hoje, um grande futuro amanhã</p>
+        <nav style="margin-top: 15px;">
+            <a href="#novidades">Novidades</a>
+            <a href="#midia">Vídeos</a>
+            <a href="#solucoes">Soluções</a>
+            <a href="#interativo">Quiz Interativo</a>
         </nav>
     </header>
 
-    <main>
-        <section id="hero">
-            <img src="images/plantacao.jpg" alt="Plantação jovem e sustentável crescendo sob a luz do sol">
-            <h2>Equilíbrio entre produção e meio ambiente</h2>
+    <div class="container">
+
+        <section id="novidades">
+            <h2>🌱 Novidades do Agro em 2026</h2>
+            <p>O cenário agrícola em 2026 reforça o papel da tecnologia a favor da natureza. Entre as principais tendências para este ano, destacam-se o uso de <strong>Inteligência Artificial (IA)</strong> para monitorar a saúde do solo em tempo real e a expansão dos <strong>Bioinsumos</strong>, defensivos naturais que protegem as plantas sem agredir os polinizadores, como as abelhas.</p>
         </section>
 
-        <section id="sobre">
-            <h2>Sobre o Agro Forte</h2>
-            <p>O Agro Forte busca unir tecnologia e sustentabilidade no campo, promovendo práticas que aumentam a produtividade e preservam o meio ambiente.</p>
+        <section id="midia">
+            <h2>🎥 Galeria e Conteúdo Audiovisual</h2>
+            <p style="margin-bottom: 15px;">Assista abaixo a um exemplo de como a tecnologia e a sustentabilidade andam juntas no campo:</p>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo Agrinho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </section>
+
+        <section id="solucoes">
+            <h2>💡 Soluções Práticas de Sustentabilidade</h2>
+            <div class="grid-solucoes">
+                <div class="card">
+                    <h3>Nas Propriedades</h3>
+                    <p>Uso de painéis solares para gerar energia limpa e captação da água da chuva para sistemas de irrigação gota a gota, evitando o desperdício.</p>
+                </div>
+                <div class="card">
+                    <h3>Nas Escolas</h3>
+                    <p>Criação de composteiras orgânicas utilizando restos da merenda escolar, transformando lixo em adubo para hortas comunitárias.</p>
+                </div>
+                <div class="card">
+                    <h3>Na Comunidade</h3>
+                    <p>Programas de coleta seletiva e mutirões de plantio de árvores nativas para proteger as margens dos rios locais (matas ciliares).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="interativo">
+            <h2>🧠 Desafio Interativo: Você é Sustentável?</h2>
+            <div class="quiz-container">
+                <div id="pergunta-quiz">
+                    <p><strong>Pergunta:</strong> Qual destas práticas ajuda diretamente a economizar água na agricultura?</p>
+                </div>
+                <div id="alternativas">
+                    <button class="btn-quiz" onclick="verificarResposta(false)">Irrigação por inundação</button>
+                    <button class="btn-quiz" onclick="verificarResposta(true)">Irrigação por gotejamento</button>
+                    <button class="btn-quiz" onclick="verificarResposta(false)">Não monitorar o solo</button>
+                </div>
+                <div id="resultado-quiz"></div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Projeto Concurso Agrinho. Desenvolvido para fins educativos.</p>
+    </footer>
+
+    <script>
+        function verificarResposta(correto) {
+            const resultadoDiv = document.getElementById('resultado-quiz');
+            if (correto) {
+                resultadoDiv.innerHTML = "🎉 Resposta Correta! O gotejamento leva a água direto à raiz da planta, evitando a evaporação e o desperdício.";
+                resultadoDiv.style.color = "#1b5e20";
+            } else {
+                resultadoDiv.innerHTML = "❌ Tente novamente! Essa prática não é a ideal para economizar recursos hídricos.";
+                resultadoDiv.style.color = "#b71c1c";
+            }
+        }
+    </script>
+
+</body>
+</html>
