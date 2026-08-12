@@ -1,4 +1,4 @@
-/* --- VARIÁVEIS DE CORES (MODO CLARO E ESCURO) --- */
+/* --- VARIÁVEIS DE CORES --- */
 :root {
     --bg-body: #f4f9f4;
     --bg-card: #ffffff;
@@ -53,7 +53,52 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 12px;
+}
+
+.subtitle {
+    font-style: italic;
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+.header-actions {
+    display: flex;
     gap: 10px;
+    margin: 5px 0;
+}
+
+/* --- BOTÕES DO CABEÇALHO --- */
+.like-btn, .theme-toggle-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 4px var(--shadow);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.like-btn:hover, .theme-toggle-btn:hover {
+    transform: scale(1.05);
+}
+
+.like-btn:active .heart-icon {
+    transform: scale(1.4);
+}
+
+.heart-icon {
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+nav {
+    margin-top: 5px;
 }
 
 nav a {
@@ -65,23 +110,6 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-}
-
-/* Botão do Modo Escuro */
-.theme-toggle-btn {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 10px;
-    box-shadow: 0 2px 4px var(--shadow);
-}
-
-.theme-toggle-btn:hover {
-    opacity: 0.9;
 }
 
 .container {
@@ -119,7 +147,7 @@ h2 {
     border-left: 5px solid var(--primary-color);
 }
 
-/* --- MÍDIA (VÍDEOS E IMAGENS) --- */
+/* --- MÍDIA --- */
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -163,8 +191,6 @@ h2 {
     font-size: 32px;
     cursor: pointer;
     user-select: none;
-    transform: scale(1);
-    transform-style: preserve-3d;
     transition: transform 0.3s, background-color 0.3s;
 }
 
@@ -181,7 +207,6 @@ h2 {
     background-color: #81c784;
     border-color: #388e3c;
     cursor: default;
-    visibility: visible;
 }
 
 #game-status {
@@ -214,7 +239,6 @@ footer {
     margin-top: 40px;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 500px) {
     .memory-grid {
         grid-template-columns: repeat(3, 1fr);
