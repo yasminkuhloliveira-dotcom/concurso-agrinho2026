@@ -1,89 +1,222 @@
-/* Configurações Globais */
+/* --- VARIÁVEIS DE CORES (MODO CLARO E ESCURO) --- */
+:root {
+    --bg-body: #f4f9f4;
+    --bg-card: #ffffff;
+    --bg-subcard: #e8f5e9;
+    --text-color: #333333;
+    --primary-color: #2e7d32;
+    --primary-dark: #1b5e20;
+    --border-color: #a5d6a7;
+    --card-flipped: #2e7d32;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+    --bg-body: #121212;
+    --bg-card: #1e1e1e;
+    --bg-subcard: #2c2c2c;
+    --text-color: #e0e0e0;
+    --primary-color: #4caf50;
+    --primary-dark: #2e7d32;
+    --border-color: #388e3c;
+    --card-flipped: #388e3c;
+    --shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* --- ESTILIZAÇÃO GERAL --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 body {
-    background-color: #f4f7f4;
-    color: #333;
+    background-color: var(--bg-body);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
-/* Cabeçalho e Menu */
 header {
-    background-color: #2e6f40; /* Verde Agrinho */
+    background-color: var(--primary-dark);
     color: white;
-    padding: 1rem 2rem;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.header-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 10px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
+    margin: 0 10px;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #a2e8b7;
+    text-decoration: underline;
 }
 
-/* Seção Hero */
-#hero {
-    position: relative;
-    text-align: center;
+/* Botão do Modo Escuro */
+.theme-toggle-btn {
+    background-color: var(--primary-color);
     color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px var(--shadow);
 }
 
-#hero img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    filter: brightness(60%); /* Escurece a imagem para destacar o texto */
+.theme-toggle-btn:hover {
+    opacity: 0.9;
 }
 
-#hero h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2.5rem;
-    width: 80%;
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
 }
 
-/* Seções de Conteúdo */
 section {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    background: var(--bg-card);
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow);
 }
 
 h2 {
-    color: #2e6f40;
-    margin-bottom: 15px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-#tecnologias ul {
-    list-style-type: none;
+/* --- GRID DE SOLUÇÕES --- */
+.grid-solucoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-#tecnologias li {
-    background: white;
-    margin: 10px 0;
-    padding: 15px;
-    border-left: 5px solid #2e6f40;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+.card {
+    background: var(--bg-subcard);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-color);
 }
 
-/* Rodapé */
+/* --- MÍDIA (VÍDEOS E IMAGENS) --- */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-bottom: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* --- JOGO DA MEMÓRIA --- */
+.memory-game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.memory-card {
+    height: 90px;
+    background-color: var(--bg-subcard);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    cursor: pointer;
+    user-select: none;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.memory-card:active {
+    transform: scale(0.95);
+}
+
+.memory-card.flipped {
+    background-color: var(--card-flipped);
+    cursor: default;
+}
+
+.memory-card.matched {
+    background-color: #81c784;
+    border-color: #388e3c;
+    cursor: default;
+    visibility: visible;
+}
+
+#game-status {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.btn-reset {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.btn-reset:hover {
+    background-color: var(--primary-dark);
+}
+
 footer {
-    background-color: #1e3d25;
-    color:
+    background-color: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 500px) {
+    .memory-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
