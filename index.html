@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2026 - Sustentabilidade no Campo e na Escola</title>
+    <title>Agrinho 2026 - Agro Forte, Futuro Sustentável</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="header-content">
-            <h1>Agrinho 2026: Inovação e Sustentabilidade</h1>
-            <p>Pequenas ações hoje, um grande futuro amanhã</p>
-            <button class="theme-toggle-btn" id="theme-toggle">🌙 Modo Escuro</button>
-            <nav style="margin-top: 10px;">
+            <h1>Agrinho 2026</h1>
+            <p class="subtitle">"Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente"</p>
+            
+            <div class="header-actions">
+                <button class="like-btn" id="like-btn">
+                    <span class="heart-icon">❤️</span> 
+                    <span id="like-count">0</span> Curtidas
+                </button>
+                
+                <button class="theme-toggle-btn" id="theme-toggle">🌙 Modo Escuro</button>
+            </div>
+
+            <nav>
                 <a href="#novidades">Novidades</a>
                 <a href="#midia">Vídeos</a>
                 <a href="#solucoes">Soluções</a>
@@ -22,19 +31,19 @@
         </div>
     </header>
 
-    <div class="container">
+    <main class="container">
 
         <section id="novidades">
             <h2>🌱 Novidades do Agro em 2026</h2>
-            <p>O cenário agrícola em 2026 reforça o papel da tecnologia a favor da natureza. Entre as principais tendências para este ano, destacam-se o uso de <strong>Inteligência Artificial (IA)</strong> para monitorar a saúde do solo em tempo real e a expansão dos <strong>Bioinsumos</strong>, defensivos naturais que protegem as plantas sem agredir os polinizadores, como as abelhas.</p>
+            <p>Em 2026, a busca pelo equilíbrio entre produção e preservação ambiental é o motor do agronegócio. Destaques do ano incluem o avanço do uso de <strong>Inteligência Artificial (IA)</strong> na aplicação precisa de insumos, a expansão do uso de <strong>Bioinsumos</strong> no manejo de pragas e novas tecnologias de agricultura regenerativa.</p>
         </section>
 
         <section id="midia">
             <h2>🎥 Galeria e Conteúdo Audiovisual</h2>
-            <p style="margin-bottom: 15px;">Assista abaixo a um exemplo de como a tecnologia e a sustentabilidade andam juntas no campo:</p>
+            <p style="margin-bottom: 15px;">Conheça mais sobre como a tecnologia impulsiona o desenvolvimento sustentável no campo:</p>
             
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo Agrinho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo Agrinho 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
 
@@ -43,15 +52,15 @@
             <div class="grid-solucoes">
                 <div class="card">
                     <h3>Nas Propriedades</h3>
-                    <p>Uso de painéis solares para gerar energia limpa e captação da água da chuva para sistemas de irrigação gota a gota, evitando o desperdício.</p>
+                    <p>Uso de energia solar, captação de água da chuva e técnicas de irrigação por gotejamento para máxima eficiência hídrica.</p>
                 </div>
                 <div class="card">
                     <h3>Nas Escolas</h3>
-                    <p>Criação de composteiras orgânicas utilizando restos da merenda escolar, transformando lixo em adubo para hortas comunitárias.</p>
+                    <p>Implementação de composteiras para resíduos orgânicos da merenda e criação de hortas comunitárias pedagógicas.</p>
                 </div>
                 <div class="card">
                     <h3>Na Comunidade</h3>
-                    <p>Programas de coleta seletiva e mutirões de plantio de árvores nativas para proteger as margens dos rios locais (matas ciliares).</p>
+                    <p>Ações de reflorestamento em áreas de preservação permanente (matas ciliares) e programas fortalecidos de reciclagem.</p>
                 </div>
             </div>
         </section>
@@ -67,7 +76,7 @@
             </div>
         </section>
 
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2026 Projeto Concurso Agrinho. Desenvolvido para fins educativos.</p>
