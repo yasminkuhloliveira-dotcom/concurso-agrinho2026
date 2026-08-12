@@ -1,3 +1,17 @@
+/* --- LÓGICA DO BOTÃO DE LIKES (COM PERSISTÊNCIA) --- */
+const likeBtn = document.getElementById('like-btn');
+const likeCountSpan = document.getElementById('like-count');
+
+// Recupera curtidas anteriores ou inicia com 0
+let likes = parseInt(localStorage.getItem('agrinho_likes')) || 0;
+likeCountSpan.textContent = likes;
+
+likeBtn.addEventListener('click', () => {
+    likes++;
+    likeCountSpan.textContent = likes;
+    localStorage.setItem('agrinho_likes', likes);
+});
+
 /* --- LÓGICA DO MODO ESCURO --- */
 const themeToggleBtn = document.getElementById('theme-toggle');
 
